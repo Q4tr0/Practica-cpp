@@ -35,7 +35,7 @@ int main(){
 		cin >> numero;
 		//esta funcion (system) permite importar funciones de la consola y se usara la funcion "cls" que permite limpiar la pantalla de la consola
 		system("cls");
-		while(modificador2==true && numero > 0 && numero < 360 ){
+		while(modificador2==true && numero => 0 && numero <= 360 ){
 			//se instancia o llama a la funcion calculo_angulos tomando como argumento la variable numero que se le ha asignado un valor previamente
 			calculo_angulos(numero); 
 			/*se modifica el valor de la variable de activacion del primer bucle (maodificador1) para que no se ejecute infinitamente, se modifica aqui porque requiero que el 
