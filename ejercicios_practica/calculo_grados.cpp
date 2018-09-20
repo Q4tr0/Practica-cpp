@@ -34,7 +34,6 @@ int main(){
 		//esta funcion (system) permite importar funciones de la consola y se usara la funcion "cls" que permite limpiar la pantalla de la consola
 		system("cls");
 		while(numero >= 0 && numero <= 360 ){
-				break;
 			//se instancia o llama a la funcion calculo_angulos tomando como argumento la variable numero que se le ha asignado un valor previamente
 			calculo_angulos(numero); 
 			/*se modifica el valor de la variable de activacion del primer bucle (maodificador1) para que no se ejecute infinitamente, se modifica aqui porque requiero que el 
@@ -42,7 +41,7 @@ int main(){
 			modificador1 = false;
 			/*la funcion break termina la ejecuccion del ciclo, como ya el ciclo valido los datos y los procesó dentro de la funcion calculo_angulos
 			no es necesario seguir ejecutandola*/
-		
+			break;
 		}
 	}
 //esta funcion permite que no se cierre el programa inmediatamente despues de su ejecuccion
