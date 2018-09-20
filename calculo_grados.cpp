@@ -22,6 +22,7 @@ using namespace std;
 int calculo_angulos(int numero);
 
 int main(){
+	
 	int numero;
 	//se define la variable que dará activacion al bucle while
 	bool modificador1 = true; 
