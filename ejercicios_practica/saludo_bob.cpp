@@ -12,5 +12,5 @@ int main(){
 		cout << "hola " << nombre_user <<endl;
 	}
 	else
-	cout << "come monda" << endl;
+	cout << "sin saludo." << endl;
 }
