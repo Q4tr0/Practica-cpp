@@ -22,33 +22,52 @@ entrada: 2 enteros: num
 
 using namespace std;
 
+int suma(int a, int b, int c);
+int producto(int a, int b, int c);
+
 int main(){
 	int num, tipo_op, i, rsuma=0, rproducto=1;
 	bool activador=true;
-	cout << "ignrese el numero a operar que sea entero: ";
-	cin >> num;
 	while(activador=true){
-		cout << "que operacion desea realizar?...\ningrese 1 para suma y 2 para producto: ";
+		cout << "ignrese el numero a operar que sea entero: ";
+		cin >> num;
+		cout << "(1) para adicion, (2) para producto y (0) para salir..." << endl;
+		cout << "ingrese el tipo de operacion que desea efectuar: ";
 		cin >> tipo_op;
-		switch(tipo_op){
-			case 1: 
-				for(i=0; i<=num; i++){
-					rsuma += i;
-				}
-				cout << "la suma de los numeros del 1 hasta el " << num << " es: " << rsuma << endl;
-				break;
-			case 2:
-				for(i=1; i<=num; i++){
-					rproducto *= i;
-				}
-				cout << "el producto de los numeros del 1 hasta el " << num << " es: " << rproducto << endl ;
-				break;
-			default:
-				cout << "ha ingresado un valor invalido!" << endl;
-				break;
-		}		
-	break;
+		if(num <0 || tipo_op<0){
+			cout << "ingreso un valor invalido!" << endl;
+		}
+		else if(tipo_op==0){
+			break;
+		}
+		else{
+			switch(tipo_op){
+				case 1:
+					suma(i, num, rsuma);
+					break;
+				case 2:
+					producto(i, num, rproducto);
+					break;
+				default:
+					cout << "ha ingresado un valor invalido!" << endl;
+					break;
+			}
+		}	
+	system("pause");
+	system("cls");
 	}
 system("pause");
 return 0;
+}
+int suma(int a, int b, int c){
+	for(a=0; a<=b; a++){
+		c += a;
+	}
+	cout << "el resultado es: " << c << endl;
+}
+int producto(int a, int b, int c){
+	for(a=1; a<=b; a++){
+		c *= a;
+	}
+	cout << "el resultado es: " << c << endl;
 }
